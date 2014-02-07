@@ -67,18 +67,19 @@ end
 ### Development + Test ###
 group :development, :test do
   gem 'mysql2'
-  gem 'guard-rspec'
+
+  # gem 'guard-rspec'
 end
 
 
 
 ### Test ###
 group :test do
-  gem 'rspec-rails'
-  gem 'capybara'
-  gem 'factory_girl_rails'
-  gem 'database_cleaner'
-  gem 'shoulda-matchers'
+  # gem 'rspec-rails'
+  # gem 'capybara'
+  # gem 'factory_girl_rails'
+  # gem 'database_cleaner'
+  # gem 'shoulda-matchers'
 end
 
 
