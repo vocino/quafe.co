@@ -1,0 +1,35 @@
+!!!
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ] <html class="ie7" lang="en">
+/[if IE 8 ] <html class="ie8" lang="en">
+/ [if (gte IE 9)|!(IE)]><!
+%html{:lang => "en"}
+  / <![endif]
+  %head
+    %meta{:charset => "utf-8"}
+
+    = title site: "Quafe.co", separator: '|', reverse: true, reverse_on_default: true
+
+    -unless Rails.env.production?
+      = noindex
+
+    %meta{name: "viewport", content: "width=device-width,initial-scale=1,user-scalable=no"}
+
+    = stylesheet_link_tag    'application', 'data-turbolinks-track' => true
+    - if content_for?(:styles_header)
+      = yield :styles_header
+
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    - if content_for?(:scripts_header)
+      = yield :scripts_header
+
+    = csrf_meta_tags
+
+  %body
+    = render 'layouts/regions/header'
+    %main#main{role: 'main'}
+      = render 'layouts/modules/flash'
+      = yield
+
+    - if content_for?(:scripts_footer)
+      = yield :scripts_footer

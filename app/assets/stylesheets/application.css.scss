@@ -1,16 +1,39 @@
+@import 'normalize';
+
+@import 'bourbon';
+
 // Neat Settings -- uncomment if using Neat
 ///////////////////////////////////////////////////////////////////////////////
-@import "neat-helpers";
-@import "grid-settings";
+@import 'neat-helpers';
+@import 'grid-settings';
+@import 'neat';
 
 
 // Bitters
 ///////////////////////////////////////////////////////////////////////////////
-@import "variables";
-@import "extends/base";
-@import "mixins/base";
-@import "typography";
-@import "forms";
-@import "tables";
-@import "lists";
-@import "flashes";
+@import 'variables';
+@import 'extends/base';
+@import 'mixins/base';
+@import 'typography';
+@import 'forms';
+@import 'tables';
+@import 'lists';
+@import 'flashes';
+
+
+html {
+  background: url('background-dust.jpg') no-repeat center center fixed;
+  @include prefixer(background-size, cover, webkit moz spec);
+}
+
+
+
+// Modules
+///////////////////////////////////////////////////////////////////////////////
+@import 'modules/base';
+
+
+
+// Regions
+///////////////////////////////////////////////////////////////////////////////
+@import 'regions/base';

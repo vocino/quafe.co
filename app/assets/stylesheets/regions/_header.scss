@@ -1,0 +1,7 @@
+#header {
+  background-color: rgba($base-body-color, .50);
+}
+
+.container-header {
+  @extend %container;
+}
