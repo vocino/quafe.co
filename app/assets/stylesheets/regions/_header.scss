@@ -1,7 +1,34 @@
 #header {
   background-color: rgba($base-body-color, .50);
+  border-bottom: 1px solid rgba(lighten($base-body-color, 25), .50)
 }
 
 .container-header {
   @extend %container;
+  @include pad($gutter/2 0);
+}
+
+h1.logo {
+  @include span-columns(1);
+  a.quafe-logo {
+    display: block;
+
+    width: 86px;
+    height: 40px;
+
+    @extend %hide-text;
+
+    background-image: url('quafe-logo.png');
+    background-position: middle;
+    background-repeat: no-repeat;
+
+    @include hidpi(1.5) {
+      background-image: url('quafe-logo@2x.png');
+      background-size: 100%;
+    }
+
+    &:hover {
+      opacity: .75;
+    }
+  }
 }
