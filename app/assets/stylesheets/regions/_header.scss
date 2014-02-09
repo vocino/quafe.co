@@ -19,12 +19,12 @@ h1.logo {
 
     @extend %hide-text;
 
-    background-image: url('quafe-logo.png');
+    background-image: image-url('quafe-logo.png');
     background-position: middle;
     background-repeat: no-repeat;
 
     @include hidpi(1.5) {
-      background-image: url('quafe-logo@2x.png');
+      background-image: image-url('quafe-logo@2x.png');
       background-size: 100%;
     }
 

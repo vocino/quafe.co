@@ -22,7 +22,7 @@
 
 
 html {
-  background: url('background-dust.jpg') no-repeat center center fixed;
+  background: image-url('background-dust.jpg') no-repeat center center fixed;
   @include prefixer(background-size, cover, webkit moz spec);
 }
 
