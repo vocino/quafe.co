@@ -10,6 +10,7 @@
 
 h1.logo {
   @include span-columns(1);
+
   a.quafe-logo {
     display: block;
 
@@ -30,5 +31,19 @@ h1.logo {
     &:hover {
       opacity: .75;
     }
+  }
+}
+
+.top-nav {
+  @include span-columns(11);
+
+  ul.top-nav-list {
+    float: right;
+  }
+  li.top-nav-item {
+    line-height: 40px;
+  }
+  a.top-nav-link {
+
   }
 }

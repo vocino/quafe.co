@@ -1,3 +1,11 @@
 %header#header
   .container-header
     %h1.logo= link_to 'Quafe.co', '/', class: 'quafe-logo'
+    .top-nav
+      %ul.top-nav-list
+        - if user_signed_in?
+          %li.top-nav-item
+            Signed in as
+            = link_to current_user.email, edit_user_registration_path, class: 'top-nav-link'
+        - else
+          %li.top-nav-item= link_to 'Sign In', new_user_session_url, class: 'top-nav-link'
