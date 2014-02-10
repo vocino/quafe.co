@@ -41,9 +41,10 @@ h1.logo {
     float: right;
   }
   li.top-nav-item {
-    line-height: 40px;
+    float: left;
+    @include pad(0 0 0 $gutter);
   }
   a.top-nav-link {
-
+    line-height: 40px;
   }
 }

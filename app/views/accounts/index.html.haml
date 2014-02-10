@@ -1,0 +1,17 @@
+%h1 Listing accounts
+
+%table
+  %tr
+    %th Key ID
+    %th Verification Code
+    %th
+
+  - @accounts.each do |account|
+    %tr
+      %td.eve-key-id= link_to account.eve_key_id, account
+      %td.eve-verification-code= account.eve_verification_code
+      %td.table-actions= link_to 'Delete', account, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Account', new_account_path

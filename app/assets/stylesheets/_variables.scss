@@ -35,7 +35,7 @@ $base-link-color: $base-accent-color;
 $hover-link-color: darken($base-accent-color, 15);
 
 // Border color
-$base-border-color: $light-gray;
+$base-border-color: rgba(lighten($base-body-color, 25), .75);
 
 // Flash Colors
 $error-color: $light-red;

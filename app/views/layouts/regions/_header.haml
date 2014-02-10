@@ -4,8 +4,7 @@
     .top-nav
       %ul.top-nav-list
         - if user_signed_in?
-          %li.top-nav-item
-            Signed in as
-            = link_to current_user.email, edit_user_registration_path, class: 'top-nav-link'
+          %li.top-nav-item= link_to 'Accounts', accounts_path, class: 'top-nav-link'
+          %li.top-nav-item= link_to 'Sign Out', destroy_user_session_path, :method => :delete, class: 'top-nav-link'
         - else
           %li.top-nav-item= link_to 'Sign In', new_user_session_url, class: 'top-nav-link'

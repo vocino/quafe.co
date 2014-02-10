@@ -1,8 +1,13 @@
 table {
   border-collapse: collapse;
   margin: ($base-line-height / 2) 0;
-  table-layout: fixed;
   width: 100%;
+}
+
+tr {
+  &:hover {
+    background-color: rgba($base-body-color, .15);
+  }
 }
 
 th {
@@ -15,8 +20,16 @@ th {
 td {
   border-bottom: 1px solid $base-border-color;
   padding: ($base-line-height / 2) 0;
+  &.table-actions {
+    text-align: right;
+  }
+
+  &.eve-verification-code {
+    @extend %truncate;
+  }
 }
 
 tr, td, th {
   vertical-align: middle;
 }
+

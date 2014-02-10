@@ -56,6 +56,8 @@ end
 
 ### Development ###
 group :development do
+  gem 'thin'
+
   gem 'guard'
   gem 'guard-rubocop'
   gem 'guard-livereload'

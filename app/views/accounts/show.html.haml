@@ -1,0 +1,18 @@
+%p
+  %b Eve key:
+  = @account.eve_key_id
+%p
+  %b Eve verification code:
+  = @account.eve_verification_code
+%ul
+  - @data.each do |char_id, info|
+    %li
+      = info[:character].name
+      - if info[:skill_in_training].skill_in_training
+        is currently training until #{info[:skill_in_training].end_time}
+      - else
+        is not training at the moment.
+
+= link_to 'Edit', edit_account_path(@account)
+\|
+= link_to 'Back', accounts_path
